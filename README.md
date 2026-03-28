@@ -22,3 +22,19 @@ Compile-time verification of first-species counterpoint rules using LiquidHaskel
 ```bash
 cabal v2-build
 ```
+
+## Play
+
+midi で出せる
+
+```bash
+# abcmidi が必要
+brew install abcmidi
+
+# MIDI ファイルを生成
+cabal run play 2>/dev/null > /tmp/counterpoint.abc
+abc2midi /tmp/counterpoint.abc -o /tmp/counterpoint.mid
+open /tmp/counterpoint.mid
+```
+
+または出力テキストを [https://www.ne.jp/asahi/music/marinkyo/ml/abcjs-redaktilo.html.ja](https://www.ne.jp/asahi/music/marinkyo/ml/abcjs-redaktilo.html.ja) に貼り付けるとブラウザ上で楽譜表示＋再生できる

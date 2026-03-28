@@ -20,3 +20,11 @@ library
   ghc-options:
       -fplugin=LiquidHaskell
       -fplugin-opt=LiquidHaskell:--no-termination
+
+executable play
+  main-is:          Main.hs
+  hs-source-dirs:   app
+  default-language: Haskell2010
+  build-depends:
+      base             >= 4.18 && < 5
+    , counterpoint-lh

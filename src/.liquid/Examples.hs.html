@@ -146,11 +146,11 @@ Put mouse over identifiers to see inferred types
 <span class=hs-linenum>134: </span><span class='hs-comment'>-- ----------------------------------------------------------------</span>
 <span class=hs-linenum>135: </span>
 <span class=hs-linenum>136: </span><span class='hs-comment'>-- 完全4度 (5半音) は不協和扱い -&gt; makeBar の型エラー</span>
-<span class=hs-linenum>137: </span><span class='hs-definition'>bad_P4</span> <span class='hs-keyglyph'>::</span> <span class='hs-conid'>Counterpoint</span>
-<span class=hs-linenum>138: </span><a class=annot href="#"><span class=annottext>Counterpoint.Counterpoint</span><span class='hs-definition'>bad_P4</span></a> <span class='hs-keyglyph'>=</span>
-<span class=hs-linenum>139: </span>       <a class=annot href="#"><span class=annottext>Counterpoint.Bar</span><span class='hs-varid'>makeBar</span></a> <a class=annot href="#"><span class=annottext>{v : Counterpoint.Pitch | v == G}</span><span class='hs-conid'>G</span></a> <a class=annot href="#"><span class=annottext>GHC.Types.Int</span><span class='hs-num'>4</span></a> <a class=annot href="#"><span class=annottext>{v : Counterpoint.Pitch | v == C}</span><span class='hs-conid'>C</span></a> <a class=annot href="#"><span class=annottext>GHC.Types.Int</span><span class='hs-num'>4</span></a>   <span class='hs-comment'>-- 完全5度（合法）</span>
-<span class=hs-linenum>140: </span>    <span class='hs-conop'>:|</span> <a class=annot href="#"><span class=annottext>Counterpoint.Bar</span><span class='hs-varid'>makeBar</span></a> <a class=annot href="#"><span class=annottext>{v : Counterpoint.Pitch | v == C}</span><span class='hs-conid'>C</span></a> <a class=annot href="#"><span class=annottext>GHC.Types.Int</span><span class='hs-num'>5</span></a> <a class=annot href="#"><span class=annottext>{v : Counterpoint.Pitch | v == G}</span><span class='hs-conid'>G</span></a> <span class=hs-error><a class=annot href="#"><span class=annottext>GHC.Types.Int</span><span class='hs-num'>4</span></a></span>   <span class='hs-comment'>-- 完全4度 (5半音) -&gt; 型エラー</span>
-<span class=hs-linenum>141: </span>    <span class='hs-conop'>:|</span> <a class=annot href="#"><span class=annottext>{v : Counterpoint.Counterpoint | v == Fine}</span><span class='hs-conid'>Fine</span></a>
+<span class=hs-linenum>137: </span><span class='hs-comment'>-- bad_P4 :: Counterpoint</span>
+<span class=hs-linenum>138: </span><span class='hs-comment'>-- bad_P4 =</span>
+<span class=hs-linenum>139: </span><span class='hs-comment'>--        makeBar G 4 C 4   -- 完全5度（合法）</span>
+<span class=hs-linenum>140: </span><span class='hs-comment'>--     :| makeBar C 5 G 4   -- 完全4度 (5半音) -&gt; 型エラー</span>
+<span class=hs-linenum>141: </span><span class='hs-comment'>--     :| Fine</span>
 <span class=hs-linenum>142: </span>
 <span class=hs-linenum>143: </span><span class='hs-comment'>-- 長2度 (2半音) -&gt; 型エラー</span>
 <span class=hs-linenum>144: </span><span class='hs-comment'>-- bad_M2 :: Counterpoint</span>
