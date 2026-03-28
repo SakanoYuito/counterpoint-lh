@@ -1,0 +1,8 @@
+-- Stackage Nightly snapshot that ships LiquidHaskell 0.9.12.2.1 for GHC 9.12.2
+with-compiler: ghc-9.12.2
+
+packages: .
+
+-- Use the Stackage nightly index for a coherent dependency set
+-- (liquidhaskell-0.9.12.2.1 is on nightly-2026-03-25)
+index-state: hackage.haskell.org 2026-03-25T00:00:00Z

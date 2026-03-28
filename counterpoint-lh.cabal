@@ -1,0 +1,22 @@
+cabal-version:      3.0
+name:               counterpoint-lh
+version:            0.1.0.0
+synopsis:           Two-voice counterpoint verified by LiquidHaskell refinement types
+description:
+    Compile-time verification of species counterpoint rules
+    (e.g. no parallel fifths/octaves) using LiquidHaskell and Z3.
+license:            BSD-3-Clause
+build-type:         Simple
+
+library
+  exposed-modules:
+      Counterpoint
+    , Examples
+  hs-source-dirs:     src
+  default-language:   Haskell2010
+  build-depends:
+      base             >= 4.18 && < 5
+    , liquidhaskell    >= 0.9.12
+  ghc-options:
+      -fplugin=LiquidHaskell
+      -fplugin-opt=LiquidHaskell:--no-termination
