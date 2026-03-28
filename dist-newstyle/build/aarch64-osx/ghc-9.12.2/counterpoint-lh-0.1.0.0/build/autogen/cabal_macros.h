@@ -30,6 +30,16 @@
   (major1) == 0 && (major2) <  9 || \
   (major1) == 0 && (major2) == 9 && (minor) <= 12)
 #endif /* MIN_VERSION_liquidhaskell */
+/* package process-1.6.25.0 */
+#ifndef VERSION_process
+#define VERSION_process "1.6.25.0"
+#endif /* VERSION_process */
+#ifndef MIN_VERSION_process
+#define MIN_VERSION_process(major1,major2,minor) (\
+  (major1) <  1 || \
+  (major1) == 1 && (major2) <  6 || \
+  (major1) == 1 && (major2) == 6 && (minor) <= 25)
+#endif /* MIN_VERSION_process */
 
 /* tool gcc-17.0.0 */
 #ifndef TOOL_VERSION_gcc
